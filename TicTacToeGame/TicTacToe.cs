@@ -4,17 +4,27 @@ using System.Text;
 
 namespace TicTacToeGame
 {
-    internal class TicTacToe
+    class TicTacToe
     {
-        public static void Board()
+        char player, computer;
+        public void Board()
         {
-            char[] arr = new char[10];
-            for (int i = 1; i<=10; i++)
+            Console.WriteLine("Enter Your Letter 'X' or 'Y' ");
+            char letter = char.Parse(Console.ReadLine());
+            if (letter=='x' || letter=='X')
             {
-
-                arr[i]=' ';
+                player='x';
+                computer='y';
             }
-        }
+            else
+            {
+                player='y';
+                computer='x';
+            }
 
+            Console.WriteLine("PLAYER="+player);
+            Console.WriteLine("COMPUTER="+computer);
+
+        }
     }
 }
